@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(20, 17, 17);
+    font-family: courier;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 3.4em
+}
+
+
+
+#convert {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+.buttons {
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 70px;
+}
