@@ -36,7 +36,6 @@ function findRour(char) {
         case "t":
             charRour = "7";
             break;
-            // ...
     }
     return charRour;
 }
@@ -66,7 +65,6 @@ function findBrut(char) {
         case "7":
             charBrut = "t";
             break;
-            // ...
     }
     return charBrut;
 }
@@ -93,14 +91,14 @@ function getInBrut(word) {
 
 function encrypt() {
     var decrypted = document.getElementById('decryptedarea');
-    var encrypted = getInRour(decrypted.value); // Contient le message nu
+    var encrypted = getInRour(decrypted.value);
     var elEncrypted = document.getElementById('encryptedarea');
     elEncrypted.value = encrypted;
     elEncrypted.select();
 }
 function decrypt() {
     var decrypted = document.getElementById('decryptedarea');
-    var encrypted = getInBrut(decrypted.value); // Contient le message nu
+    var encrypted = getInBrut(decrypted.value);
     var elEncrypted = document.getElementById('encryptedarea');
     elEncrypted.value = encrypted;
     elEncrypted.select();
@@ -128,9 +126,9 @@ function switchIt() {
         button.textContent = "Encrypt";
     }
 }
-function clear() {
-    var decrypted = document.getElementById('decryptedarea');
-    var encrypted = document.getElementById('encryptedarea');
-    decrypted.value = "";
-    encrypted.value = "";
+function clearIt() {
+    var decryptedo = document.getElementById('decryptedarea');
+    var encryptedo = document.getElementById('encryptedarea');
+    decryptedo.value = "";
+    encryptedo.value = "";
 }

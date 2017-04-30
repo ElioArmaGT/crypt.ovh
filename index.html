@@ -6,6 +6,7 @@
     <title>crypt.ovh</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="main.js"></script>
 </head>
 
 <body onload="init()">
@@ -15,11 +16,10 @@
 
     <section id="convert">
         <div class="box" id="decrypted"><textarea name="decrypted" id="decryptedarea" cols="30" rows="10" placeholder="Ex : Lorem Ipsum dolor sit amet, "></textarea></div>
-        <div id="buttonsholder"><button class="button" id="encryptbutton" onClick="encrypt()">Encrypt</button><button class="button" id="clearbutton" onClick="clear()">Clear</button></div>
-        <div class="box" id="encrypted"><textarea name="encrypted" id="encryptedarea" cols="30" rows="10" placeholder="Ex : L0r3m 1psm D0l0r s1t 4m3t, " readonly></textarea></div>
+        <div id="buttonsholder"><button class="button" id="encryptbutton" onClick="encrypt()">Encrypt</button><button class="button" id="clearbutton" onClick="clearIt()" >Clear</button></div>
+        <div class="box" id="encrypted"><textarea name="encrypted" id="encryptedarea" cols="30" rows="10" placeholder="Ex : L0r3m 1psum D0l0r s1t 4m3t, " readonly></textarea></div>
     </section>
-    <footer><span id="copyright">© Elio Acar 2017.<br>    All right reserved</span></footer>
-    <script src="main.js"></script>
+    <footer><span id="copyright">© Elio Acar 2017.<br>    All rights reserved</span></footer>
 </body>
 
 </html>
