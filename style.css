@@ -66,5 +66,15 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+}
+#switch:hover {
+    -webkit-transition: opacity 0.5s;
+    opacity: 0.8;
+}
+
+#switch:active {
+    background-color: #74181a;
 }
