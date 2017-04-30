@@ -96,6 +96,7 @@ function encrypt() {
     elEncrypted.value = encrypted;
     elEncrypted.select();
 }
+
 function decrypt() {
     var decrypted = document.getElementById('decryptedarea');
     var encrypted = getInBrut(decrypted.value);
@@ -103,6 +104,7 @@ function decrypt() {
     elEncrypted.value = encrypted;
     elEncrypted.select();
 }
+
 function switchIt() {
     var before1 = document.getElementById('encryptedarea');
     var before2 = document.getElementById('decryptedarea');
@@ -115,17 +117,30 @@ function switchIt() {
         var actualMode = document.getElementById('actualmode');
         actualMode.textContent = "Mode : Decryption";
         var button = document.getElementById('encryptbutton');
-        button.onclick = function(){decrypt();};
+        button.onclick = function () {
+            decrypt();
+        };
         button.textContent = "Decrypt";
+        var area1 = document.getElementById('decryptedarea');
+        area1.placeholder = "Ex : L0r3m 1psum D0l0r s1t 4m3t, ";
+        var area2 = document.getElementById('encryptedarea');
+        area2.placeholder = "Ex : Lorem Ipsum dolor sit amet, "
     } else if (mode === "decryption") {
         mode = "encryption";
         var actualMode = document.getElementById('actualmode');
         actualMode.textContent = "Mode : Encryption";
         var button = document.getElementById('encryptbutton');
-        button.onclick = function(){encrypt();};
+        button.onclick = function () {
+            encrypt();
+        };
         button.textContent = "Encrypt";
+        var area1 = document.getElementById('decryptedarea');
+        area1.placeholder = "Ex : Lorem Ipsum dolor sit amet, ";
+        var area2 = document.getElementById('encryptedarea');
+        area2.placeholder = "Ex : L0r3m 1psum D0l0r s1t 4m3t, ";
     }
 }
+
 function clearIt() {
     var decryptedo = document.getElementById('decryptedarea');
     var encryptedo = document.getElementById('encryptedarea');
