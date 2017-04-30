@@ -9,17 +9,17 @@
 </head>
 
 <body onload="init()">
-    <script src="main.js"></script>
     <h1 class="title">crypt.ovh
         <!--<span id="bl" style="visibility: visible">_</span>--></h1>
-    <div id="mode"><span id="actualmode">Mode : Encryption</span><button id="switch">Switch</button></div>
+    <div id="mode"><span id="actualmode">Mode : Encryption</span><button id="switch" onClick="switchIt()" >Switch</button></div>
 
     <section id="convert">
         <div class="box" id="decrypted"><textarea name="decrypted" id="decryptedarea" cols="30" rows="10" placeholder="Ex : Lorem Ipsum dolor sit amet, "></textarea></div>
-        <div class="buttons"><button id="encryptbutton">Encrypt</button></div>
+        <div id="buttonsholder"><button class="button" id="encryptbutton" onClick="encrypt()">Encrypt</button><button class="button" id="clearbutton" onClick="clear()">Clear</button></div>
         <div class="box" id="encrypted"><textarea name="encrypted" id="encryptedarea" cols="30" rows="10" placeholder="Ex : L0r3m 1psm D0l0r s1t 4m3t, " readonly></textarea></div>
     </section>
     <footer><span id="copyright">© Elio Acar 2017.<br>    All right reserved</span></footer>
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -38,7 +38,7 @@ body {
     justify-content: center;
 }
 
-.buttons {
+#buttonsholder {
     margin: 30px;
     display: flex;
     justify-content: center;
@@ -118,7 +118,7 @@ textarea {
     margin-top: 8px;
 }
 
-#encryptbutton {
+.button {
     background-color: #BD2628;
     border: none;
     border-radius: 80px;
@@ -129,12 +129,13 @@ textarea {
     display: inline-block;
     font-size: 23px;
     -webkit-transition: background-color 0.2s;
+    margin-right: 20px;
 }
-#encryptbutton:hover {
+.button:hover {
     background-color: #aa2224;
     -webkit-transition: background-color 0.2s;
 }
-#encryptbutton:active {
+.button:active {
     background-color: #74181a;
 }
 footer {
