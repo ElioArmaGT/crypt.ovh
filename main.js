@@ -147,3 +147,12 @@ function clearIt() {
     decryptedo.value = "";
     encryptedo.value = "";
 }
+function search(ele) {
+    if(event.keyCode == 13) {
+        if (mode === "encryption") {
+            encrypt();
+        } else if (mode === "decryption") {
+            decrypt();
+        }    
+    }
+}

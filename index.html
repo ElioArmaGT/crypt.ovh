@@ -15,7 +15,7 @@
     <div id="mode"><span id="actualmode">Mode : Encryption</span><button id="switch" onClick="switchIt()" >Switch</button></div>
 
     <section id="convert">
-        <div class="box" id="decrypted"><textarea name="decrypted" id="decryptedarea" cols="30" rows="10" placeholder="Ex : Lorem Ipsum dolor sit amet, "></textarea></div>
+        <div class="box" id="decrypted"><textarea name="decrypted" id="decryptedarea" cols="30" rows="10" placeholder="Ex : Lorem Ipsum dolor sit amet, " onkeydown="search(this)"></textarea></div>
         <div id="buttonsholder"><button class="button" id="encryptbutton" onClick="encrypt()">Encrypt</button><button class="button" id="clearbutton" onClick="clearIt()" >Clear</button></div>
         <div class="box" id="encrypted"><textarea name="encrypted" id="encryptedarea" cols="30" rows="10" placeholder="Ex : L0r3m 1psum D0l0r s1t 4m3t, " readonly></textarea></div>
     </section>
