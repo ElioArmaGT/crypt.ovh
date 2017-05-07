@@ -91,7 +91,6 @@ function encrypt() {
     var encrypted = getInRour(decrypted.value);
     var elEncrypted = document.getElementById('encryptedarea');
     elEncrypted.value = encrypted;
-    elEncrypted.select();
 }
 
 function decrypt() {
@@ -99,7 +98,6 @@ function decrypt() {
     var encrypted = getInBrut(decrypted.value);
     var elEncrypted = document.getElementById('encryptedarea');
     elEncrypted.value = encrypted;
-    elEncrypted.select();
 }
 
 function switchIt() {
@@ -148,8 +146,18 @@ function search(ele) {
     if(event.keyCode == 13) {
         if (mode === "encryption") {
             encrypt();
+            var elEncrypted = document.getElementById('encryptedarea');
+            elEncrypted.select();
         } else if (mode === "decryption") {
             decrypt();
+            var elEncrypted = document.getElementById('encryptedarea');
+            elEncrypted.select();
         }    
+    } else {
+        if (mode === "encryption") {
+            encrypt();
+        } else if (mode === "decryption") {
+            decrypt();
+        }
     }
 }
