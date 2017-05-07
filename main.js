@@ -6,9 +6,6 @@
     }
 }
 setInterval("blink(bl)", 500);*/
-function init() {
-    document.getElementById("decryptedarea").focus();
-}
 var mode = "encryption";
 
 function findRour(char) {
