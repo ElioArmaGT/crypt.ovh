@@ -1,11 +1,3 @@
-/*<!--function blink(ob) {
-    if (ob.style.visibility == "visible") {
-        ob.style.visibility = "hidden";
-    } else {
-        ob.style.visibility = "visible";
-    }
-}
-setInterval("blink(bl)", 500);*/
 var mode = "encryption";
 
 function findRour(char) {
@@ -91,7 +83,6 @@ function encrypt() {
     var encrypted = getInRour(decrypted.value);
     var elEncrypted = document.getElementById('encryptedarea');
     elEncrypted.value = encrypted;
-    elEncrypted.select();
 }
 
 function decrypt() {
@@ -99,6 +90,17 @@ function decrypt() {
     var encrypted = getInBrut(decrypted.value);
     var elEncrypted = document.getElementById('encryptedarea');
     elEncrypted.value = encrypted;
+}
+
+function buttonEncrypt() {
+    encrypt();
+    var elEncrypted = document.getElementById('encryptedarea');
+    elEncrypted.select();
+}
+
+function buttonDecrypt() {
+    decrypt();
+    var elEncrypted = document.getElementById('encryptedarea');
     elEncrypted.select();
 }
 
@@ -115,7 +117,7 @@ function switchIt() {
         actualMode.textContent = "Mode : Decryption";
         var button = document.getElementById('encryptbutton');
         button.onclick = function () {
-            decrypt();
+            buttonDecrypt();
         };
         button.textContent = "Decrypt";
         var area1 = document.getElementById('decryptedarea');
@@ -128,7 +130,7 @@ function switchIt() {
         actualMode.textContent = "Mode : Encryption";
         var button = document.getElementById('encryptbutton');
         button.onclick = function () {
-            encrypt();
+            buttonEncrypt();
         };
         button.textContent = "Encrypt";
         var area1 = document.getElementById('decryptedarea');
@@ -138,18 +140,32 @@ function switchIt() {
     }
 }
 
+function liveEnc() {
+    if (mode === "encryption") {
+        encrypt();
+    } else if (mode === "decryption") {
+        decrypt();
+    }
+}
+setInterval("liveEnc()", 500);
+
 function clearIt() {
     var decryptedo = document.getElementById('decryptedarea');
     var encryptedo = document.getElementById('encryptedarea');
     decryptedo.value = "";
     encryptedo.value = "";
 }
+
 function search(ele) {
-    if(event.keyCode == 13) {
+    if (event.keyCode == 13) {
         if (mode === "encryption") {
             encrypt();
+            var elEncrypted = document.getElementById('encryptedarea');
+            elEncrypted.select();
         } else if (mode === "decryption") {
             decrypt();
-        }    
+            var elEncrypted = document.getElementById('encryptedarea');
+            elEncrypted.select();
+        }
     }
 }
