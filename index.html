@@ -12,8 +12,16 @@
     <script>
         function init() {
             document.getElementById("decryptedarea").focus();
-        }
 
+            function getRandomArbitrary(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+            var failed = document.getElementById('fail');
+            failed.textContent = "Chances de réussir : " + getRandomArbitrary(40, 101) + "%";
+
+        }
     </script>
     <script src="main.js"></script>
 </head>
@@ -21,7 +29,7 @@
 <body onload="init()">
     <h1 class="title">crypt.ovh
         <!--<span id="bl" style="visibility: visible">_</span>--></h1>
-    <div id="mode"><span id="actualmode">Mode : Encryption</span><button id="switch" onClick="switchIt()">Switch</button></div>
+    <div id="mode"><span id="actualmode">Mode : Encryption</span><span id="fail">Chances de réussir : 50%</span><button id="switch" onClick="switchIt()">Switch</button></div>
 
     <section id="convert">
         <div class="box" id="decrypted"><textarea name="decrypted" id="decryptedarea" cols="30" rows="10" placeholder="Ex : Lorem Ipsum dolor sit amet, " onkeydown="search(this)"></textarea></div>
