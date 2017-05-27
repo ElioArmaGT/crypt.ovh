@@ -69,7 +69,6 @@ function getInRour(word) {
 }
 
 function getInBrut(word) {
-
     var wordBrut = "";
     for (var i = 0; i < word.length; i++) {
         wordBrut = wordBrut + findBrut(word[i]);
