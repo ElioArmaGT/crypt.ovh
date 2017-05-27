@@ -138,7 +138,6 @@ function switchIt() {
         area2.placeholder = "Ex : L0r3m 1psum D0l0r s1t 4m3t, ";
     }
 }
-
 function liveEnc() {
     if (mode === "encryption") {
         encrypt();
