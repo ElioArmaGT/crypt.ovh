@@ -44,7 +44,7 @@ function findBrut(char) {
             break;
         case "1":
             charBrut = "l";
-            break
+            break;
         case "0":
             charBrut = "o";
             break;

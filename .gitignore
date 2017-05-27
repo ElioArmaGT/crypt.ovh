@@ -1,0 +1,8 @@
+
+*.xml
+
+.idea/crypt.ovh.iml
+
+.vscode/launch.json
+
+node_modules/*
